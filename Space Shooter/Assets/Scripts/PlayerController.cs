@@ -16,10 +16,10 @@ public class PlayerController : MonoBehaviour {
     public float speed = 10;
     public Boundary boundary;
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        float moveHorrizontal = Input.GetAxis("horizontal");
-        float moveVertical = Input.GetAxis("vertical");
+        float moveHorrizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(moveHorrizontal, 0.0f, moveVertical);
         GetComponent<Rigidbody>().velocity = movement*speed;
